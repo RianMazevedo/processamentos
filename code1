@@ -1,0 +1,29 @@
+fs, no = wavfile.read('data/mini_speech_commands/no/1daa5ada_nohash_0.wav')
+fs, go = wavfile.read('data/mini_speech_commands/go/0fa1e7a9_nohash_0.wav')
+fs, yes = wavfile.read('data/mini_speech_commands/yes/1a673010_nohash_2.wav')
+fs, right = wavfile.read('data/mini_speech_commands/right/8e05039f_nohash_2.wav')
+tempo = np.arange(len(right))/fs # variável TEMPO (em segundos)
+
+plt.figure(figsize=(10,2))
+plt.title("Dominio do tempo 'no'")
+plt.xlabel("tempo (s)")
+plt.ylabel("Amplitude")
+plt.plot(tempo, no)
+
+plt.figure(figsize=(10,2))
+plt.title("Dominio do tempo 'go'")
+plt.xlabel("tempo (s)")
+plt.ylabel("Amplitude")
+plt.plot(tempo, go)
+
+plt.figure(figsize=(10,2))
+plt.title("Dominio do tempo 'yes'")
+plt.xlabel("tempo (s)")
+plt.ylabel("Amplitude")
+plt.plot(tempo, yes)
+
+plt.figure(figsize=(10,2))
+plt.title("Dominio do tempo 'right'")
+plt.xlabel("tempo (s)")
+plt.ylabel("Amplitude")
+plt.plot(tempo, right);
